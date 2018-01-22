@@ -95,6 +95,8 @@ resource "aws_instance" "default" {
   ami           = "${var.ec2_ami}"
   instance_type = "${var.instance_type}"
 
+  ebs_optimized = "${var.ebs_optimized}"
+
   user_data = "${data.template_file.user_data.rendered}"
 
   vpc_security_group_ids = [
