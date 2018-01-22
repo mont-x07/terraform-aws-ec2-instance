@@ -10,6 +10,10 @@ variable "associate_public_ip_address" {
   default = true
 }
 
+variable "ebs_optimized" {
+  default = "false"
+}
+
 variable "instance_type" {
   default = "t2.micro"
 }
